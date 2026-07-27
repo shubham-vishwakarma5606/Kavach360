@@ -174,3 +174,8 @@ The current version is a finalized front-end prototype. For production, connect 
 2. Portal: `final-release/final-portal.html`
 3. Phishing redirect: `final-release/phishing-redirect-page.html`
 4. Content library: `final-release/CONTENT_LIBRARY_FINAL.md`
+
+
+## Quick Access Update
+
+The public website now includes a Quick Access section immediately after the hero area, so users can open the final portal demo and phishing redirect page from the first page without scrolling to the old prototype section.
