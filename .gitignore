@@ -35,7 +35,7 @@ Thumbs.db
 *.p12
 *.jks
 
-# Docker volumes / local data
+# Docker/local data
 pgdata/
 miniodata/
 redisdata/
