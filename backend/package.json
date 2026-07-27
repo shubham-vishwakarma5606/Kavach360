@@ -17,7 +17,9 @@
     "zod": "latest"
   },
   "devDependencies": {
+    "@types/jsonwebtoken": "latest",
     "@types/node": "latest",
+    "@types/pg": "latest",
     "tsx": "latest",
     "typescript": "latest"
   }
