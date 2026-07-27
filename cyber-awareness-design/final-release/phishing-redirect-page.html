@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kavach360 — Safe Training Redirect</title>
+<style>
+:root{--bg:#07111f;--glass:rgba(255,255,255,.085);--line:rgba(255,255,255,.16);--text:#f8fbff;--muted:#aebbd0;--cyan:#00e5ff;--violet:#8b5cf6;--pink:#ec4899;--green:#22c55e;--red:#ef4444;--gold:#fbbf24;--shadow:0 24px 80px rgba(0,0,0,.42);font-family:Inter,system-ui,-apple-system,"Segoe UI",Arial,sans-serif}*{box-sizing:border-box}body{margin:0;min-height:100vh;color:var(--text);background:radial-gradient(circle at 20% 5%,rgba(0,229,255,.22),transparent 32%),radial-gradient(circle at 80% 10%,rgba(139,92,246,.28),transparent 34%),linear-gradient(135deg,#030712,#07111f 48%,#10051d);display:grid;place-items:center;padding:24px;overflow-x:hidden}body:before{content:"";position:fixed;inset:0;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:46px 46px;mask-image:linear-gradient(to bottom,#000,transparent 90%);pointer-events:none}.wrap{width:min(1120px,100%);display:grid;grid-template-columns:.9fr 1.1fr;gap:22px;align-items:center}.glass{position:relative;overflow:hidden;border:1px solid var(--line);background:linear-gradient(180deg,rgba(255,255,255,.12),rgba(255,255,255,.055));backdrop-filter:blur(22px) saturate(150%);border-radius:28px;box-shadow:var(--shadow)}.glass:before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.22),transparent 35%,rgba(0,229,255,.07));pointer-events:none}.hero{padding:34px}.badge{display:inline-flex;gap:8px;align-items:center;border:1px solid rgba(0,229,255,.3);background:rgba(0,229,255,.1);border-radius:999px;padding:9px 12px;color:#dffbff;font-weight:900;font-size:13px}.hero h1{font-size:clamp(38px,6vw,72px);line-height:.95;letter-spacing:-3px;margin:22px 0}.hero p{color:var(--muted);font-size:18px;line-height:1.65}.btn{border:1px solid transparent;border-radius:14px;padding:13px 16px;color:#fff;font-weight:900;background:linear-gradient(135deg,var(--cyan),var(--violet)) padding-box,conic-gradient(var(--cyan),var(--violet),var(--pink),var(--cyan)) border-box;box-shadow:0 16px 45px rgba(0,229,255,.13);cursor:pointer}.btn.ghost{background:rgba(255,255,255,.07) padding-box,conic-gradient(rgba(0,229,255,.8),rgba(255,255,255,.2),rgba(139,92,246,.8)) border-box}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}.panel{padding:24px}.mail{background:rgba(2,6,23,.62);border:1px solid var(--line);border-radius:20px;overflow:hidden;position:relative}.mail-head{height:52px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:8px;padding:0 16px}.dot{width:10px;height:10px;border-radius:50%;background:#ef4444}.dot:nth-child(2){background:#f59e0b}.dot:nth-child(3){background:#22c55e}.mail-body{padding:18px}.field{border:1px solid rgba(255,255,255,.09);background:rgba(255,255,255,.045);border-radius:14px;padding:12px;margin-bottom:10px}.field small{display:block;color:var(--muted);text-transform:uppercase;font-size:10px;font-weight:900;letter-spacing:.8px;margin-bottom:5px}.flag{border-left:4px solid var(--red);padding:12px 13px;background:rgba(239,68,68,.10);border-radius:12px;margin:10px 0;color:#fecaca}.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:16px}.step{text-align:center;padding:13px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.055)}.step b{display:block;margin-bottom:5px}.count{font-size:52px;font-weight:1000;color:var(--cyan);text-shadow:0 0 24px rgba(0,229,255,.5)}.progress{height:8px;border-radius:999px;background:rgba(255,255,255,.1);overflow:hidden;margin-top:12px}.bar{height:100%;background:linear-gradient(90deg,var(--cyan),var(--violet));width:0%;animation:load 8s linear forwards}@keyframes load{to{width:100%}}@media(max-width:900px){.wrap{grid-template-columns:1fr}.flow{grid-template-columns:1fr 1fr}}@media(max-width:520px){body{padding:14px}.flow{grid-template-columns:1fr}.hero,.panel{padding:20px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <section class="glass hero">
+    <div class="badge">🎣 Safe Phishing Simulation</div>
+    <h1>You clicked a training link.</h1>
+    <p>This was a safe simulation. No password was collected. You are being redirected to a short training module that explains the warning signs.</p>
+    <div class="count" id="count">8</div>
+    <div class="progress"><div class="bar"></div></div>
+    <div class="actions"><button class="btn" onclick="goTraining()">Start Training Now</button><button class="btn ghost" onclick="showWhy()">Show Red Flags</button></div>
+  </section>
+  <section class="glass panel">
+    <h2 style="position:relative;margin-top:0">Red Flag Lens</h2>
+    <div class="mail">
+      <div class="mail-head"><span class="dot"></span><span class="dot"></span><span class="dot"></span><b style="margin-left:8px">Simulation Email</b></div>
+      <div class="mail-body">
+        <div class="field"><small>Sender</small>IT Support &lt;support@micros0ft-security.example&gt;</div>
+        <div class="field"><small>Subject</small>Urgent: mailbox will be blocked in 15 minutes</div>
+        <div class="field"><small>Link</small>verify-mailbox-login.example</div>
+        <div class="flag">Red flags: lookalike domain, urgency pressure, unexpected login link.</div>
+      </div>
+    </div>
+    <div class="flow"><div class="step"><b>1. Click</b><small>Event tracked safely</small></div><div class="step"><b>2. Learn</b><small>Video or module</small></div><div class="step"><b>3. Quiz</b><small>3 questions</small></div><div class="step"><b>4. Improve</b><small>Report updated</small></div></div>
+  </section>
+</div>
+<script>
+let n=8;const el=document.getElementById('count');const timer=setInterval(()=>{n--;el.textContent=n;if(n<=0){clearInterval(timer);goTraining()}},1000);function goTraining(){document.body.innerHTML='<div style="color:white;text-align:center;font-family:Inter,system-ui"><h1>Redirecting to: Phishing Basics Training</h1><p>In production this opens the assigned video / interactive module.</p></div>'}function showWhy(){alert('Red flags: suspicious sender domain, urgent pressure, unfamiliar login link, generic greeting.');}
+</script>
+</body>
+</html>

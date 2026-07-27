@@ -1,0 +1,43 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: kavach360-postgres
+    environment:
+      POSTGRES_USER: kavach360
+      POSTGRES_PASSWORD: kavach360_dev_password
+      POSTGRES_DB: kavach360
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ../database/migrations:/docker-entrypoint-initdb.d
+
+  redis:
+    image: redis:7
+    container_name: kavach360-redis
+    ports:
+      - "6379:6379"
+
+  minio:
+    image: minio/minio
+    container_name: kavach360-minio
+    command: server /data --console-address ":9001"
+    environment:
+      MINIO_ROOT_USER: kavach360
+      MINIO_ROOT_PASSWORD: kavach360_minio_password
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    volumes:
+      - miniodata:/data
+
+  mailhog:
+    image: mailhog/mailhog
+    container_name: kavach360-mailhog
+    ports:
+      - "1025:1025"
+      - "8025:8025"
+
+volumes:
+  pgdata:
+  miniodata:
